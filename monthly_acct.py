@@ -7,7 +7,7 @@ import sys
 leave money for taxes, how to much to pay yourself and save to a csv file"""
 
 def print_menu():
-    #create a menu
+    """create a menu"""
     print(30 * "-" , "MENU" , 30 * "-")
     print(6 * "-", "Both programs offer savings and investment functions", 6 * "-")
     print("1. Business accounting")
@@ -15,6 +15,7 @@ def print_menu():
     print("3. Exit")
 
 def get_month():
+    """get month for accounting and splice"""
     months =["January","Feburary","March","April", "May", "June", "July", "August",
      "September", "October", "Novemeber","December"]
     month = input("Enter the month you wish to do your calculatons for: ").title()
@@ -28,13 +29,13 @@ def get_month():
         return month
 
 def monthly_income():
-    #Get monthly income, convert to float
+    """Get monthly income, convert to float"""
     income = input("Enter the amount of money you made this month: ")
     income = float(income)
     return income
 
 def expenses():
-    #Ask user for expenses until 0 is entered
+    """Ask user for expenses until 0 is entered"""
     print("Enter the amount montly expenses one by one, when done enter 0 to end")
     total_exp = 0.0
     while True:
@@ -52,7 +53,7 @@ def expenses():
 
 
 def cal_taxes(my_income, my_expenses):
-    #tax rate can be changed to what ever the user needs
+    """tax rate can be changed to what ever the user needs"""
     keep_for_taxes = 0.0
     tax_rate = 0.30
     get_diff_taxRate = input("Is your tax rate 30% enter y/n: ")
@@ -77,7 +78,7 @@ def print_pandas(month,my_income,my_expenses,taxes,pay_check):
     return data
 
 def write_to_csv(data):
-    #write to csv file, mode 'a' allows the data to be saved instead of over written
+    """write to csv file, mode 'a' allows the data to be saved instead of over written"""
     data.to_csv ('ble_expenses.csv',index=False, encoding='utf-8', mode='a')
 
 def savings(pay):
@@ -118,13 +119,13 @@ def invest_save(savings):
     pay checks and no added business expenses"""
 
 def your_paycheck_amount():
-    #Get monthly income, convert to float
+    """Get monthly income, convert to float"""
     income = input("Enter the amount of money you made this month: ")
     income = float(income)
     return income
 
 def user_monthly_expenses():
-    #Ask user for expenses until 0 is entered
+    """Ask user for expenses until 0 is entered"""
     print("Enter the amount montly expenses one by one, when done enter 0 to end")
     total_exp = 0.0
     while True:
