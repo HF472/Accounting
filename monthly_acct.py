@@ -100,7 +100,7 @@ def savings(pay):
         left_over = pay - new_expenses
         print(f"You have {left_over} left after the additional expenses")
         return left_over
-    elif additional_expenses == 'n' or  additonal_expenses == 'no':
+    elif additional_expenses == 'n' or  additional_expenses == 'no':
         print(pay)
 
 def invest_save(savings):
